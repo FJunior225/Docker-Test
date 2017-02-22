@@ -1,0 +1,8 @@
+version: '2'
+services:
+  web:
+    container_name: node-example
+    build: ./image/
+    image: node-example-img
+    ports:
+    - "4500:4500"
