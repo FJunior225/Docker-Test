@@ -19,6 +19,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/health', health);
 app.use('/docker', docker);
 
+app.get('/', function (req, res) {
+  res.send({ msg: 'hello world' });
+});
+
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
   const err = new Error('Not Found');
